@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Krona+One&family=Krub:wght@200&family=Roboto+Condensed:wght@100&display=swap');
+
+:root {
+    --cor-primaria: #111010;
+    --cor-secundária: #FFFFFF;
+    --cor-terciária: #333333;
+    --cor-quartenária: #A9A9A9;
+    --font-primaria: 'Krona One';
+    --font-secundária: 'Krub';
+    --font-terciária: 'Roboto Condensed';
+    --font-quartenária: 'Inter';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundária);
+    box-sizing: border-box;
+}
+
+.teste {
+    background-color: #FFFFFF;
+}
+
+.left_arrow {
+    top: 5%;
+    left: 0.5%;
+    height: 2.2rem;
+    width: 2.2rem;
+    cursor: pointer;
+    position: absolute;
+    background: var(--cor-secundária);
+    border-radius: 50%;
+    border: 1px dashed black;
+    transform: translateY(-50%);
+    transition-duration: 0.8s;
+    animation-duration: 3s;
+    animation: aparecer-botoes 2s;
+}
+
+:hover.left_arrow {
+    background-color: var(--cor-terciária);
+    transition: all 0.2s ease-in-out;
+}
+
+
+.container_titulo {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    animation-duration: 3s;
+    animation: nome 2s;
+}
+
+.container_titulo h1 {
+    font-family: var(--font-secundária);
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.container_tec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.container_tec svg {
+    width: 7.5rem;
+    opacity: 1;
+    transition: transform 0.5s ease;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation: girar 2s linear infinite;
+}
+
+.container_tec h1 {
+    color: var(--cor-secundária);
+    font-family: 'Krona One';
+    font-size: 0.813rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    animation-duration: 3s;
+    animation: texto 2s;
+}
+
+.container_tec p {
+    max-width: 300px;
+    font-family: 'Krub';
+    text-align: start;
+    font-size: 0.938rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--cor-secundária);
+    animation-duration: 3s;
+    animation: texto 3s;
+}
+
+@media (max-width: 768px) {
+    .container_titulo h1 {
+        font-size: 1.13rem;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container_tec svg {
+        width: 5rem;
+        transition: transform 0.5s ease;
+    }
+
+    .container_tec h1 {
+        font-size: 0.75rem;
+    }
+
+    .container_tec p {
+        max-width: 400px;
+        font-size: 0.938rem;
+    }
+
+}
